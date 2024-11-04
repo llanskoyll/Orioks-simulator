@@ -3,10 +3,12 @@ QT += sql
 QT += core
 
 unix:!macx {
+    # libpq-dev
     LIBS += -L/usr/lib/x86_64-linux-gnu/qt5/plugins/sqldrivers -lqsqlpsql
 }
 
 macx: {
+    # libpq
     LIBS += -L/opt/homebrew/opt/libpq/lib -lpq
 }
 
